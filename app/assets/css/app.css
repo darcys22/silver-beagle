@@ -28,3 +28,7 @@
   content: "";
   padding: 0;
 }
+
+body {
+  background-image: url('../images/dark_wall.png');
+}
