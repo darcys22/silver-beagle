@@ -1,6 +1,9 @@
 (function () {
   var injectParams = ['$scope', '$location', '$routeParams',
       '$timeout', 'config', 'dataService', 'modalService'];
+
+
+//At this point the customeredit controller is just something to copy shit from
   var CustomerEditController = function ($scope, $location, $routeParams,
       $timeout, config, dataService, modalService) {
         var vm = this,
@@ -26,10 +29,22 @@
             }
           }
         };
+//Ends Here
 
-  CustomerEditController.$inject = injectParams;
 
-  angular.module('customersApp').controller('CustomerEditController', CustomerEditController);
+  var HordemindController = function($scope) {};
+
+  HordemindController.$inject = injectParams;
+
+  angular.module('myApp.hordemind')
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/hordemind', {
+              templateUrl: 'hordemind/hordemind.html',
+              controller: 'HordemindController'
+            });
+    }])
+
+    .controller('HordemindController', HordemindController);
 
   }()
 );
