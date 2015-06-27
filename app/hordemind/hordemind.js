@@ -29,6 +29,7 @@
             }
           }
         };
+      };
 //Ends Here
 
 
@@ -46,5 +47,6 @@
 
     .controller('HordemindController', HordemindController);
 
-  }()
-);
+  })
+();
+
