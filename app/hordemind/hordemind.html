@@ -14,8 +14,8 @@
               <!--<span class="glyphicon glyphicon-align-justify"></span> List View-->
             <!--</a>-->
             <!--</li>-->
-            <li> oen </li>
-            <li> oen </li>
+            <li> Cover View </li>
+            <li> List View </li>
           </ul>
         </div>
       </div>
@@ -23,11 +23,10 @@
     <div class="container">
       <div class="row cardContainer show-hide-animation">
         <!--data-ng-hide="vm.listDisplayModeEnabled">-->
-        <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="col-sm-6 col-md-4 col-lg-3" data-ng-repeat="xyzz in getNumber(number) track by $index">
           <!--data-ng-class="vm.cardAnimationClass"-->
-          <!--data-ng-repeat="customer in vm.filteredCustomers | orderBy:'lastName'">-->
           <div class="card">
-            <button class="btn close cardClose" title="Delete Customer"
+            <button class="btn close cardClose" title="Delete Customer">
               <!--data-ng-click="vm.deleteCustomer(customer.id)">-->
               &times;</button>
             <!--<div class="cardHeader"><a href="#/customeredit/{{customer.id}}" class="white">{{customer.firstName + ' ' + customer.lastName}} <i class="icon-edit icon-white editIcon"></i></a></div>-->
@@ -35,7 +34,7 @@
             <div class="cardBody">
               <div class="clearfix">
                 <div class="pull-left cardBodyLeft">
-                  <a href="#/customeredit/" class="white"><img data-ng-src="assets/images/alc.jpg" class="cardImage" /></a>
+                  <a href="#/customeredit/" class="white"><img src="assets/images/alc.jpg" class="cardImage" /></a>
                 </div>
                 <div class="pull-left cardBodyRight">
                   <div class="cardBodyContent">Book of Dead, Coelho</div>
@@ -53,7 +52,7 @@
           </div>
         </div>
       </div>
-      <div class="row gridContainer customersTable show-hide-animation">
+      <div class="row gridContainer customersTable show-hide-animation hide">
         <!--data-ng-show="vm.listDisplayModeEnabled">-->
         <div class="col-md-10">
           <div>
@@ -65,8 +64,8 @@
                   <!--<th data-ng-click="vm.setOrder('city')">Location</th>-->
                   <!--<th data-ng-click="vm.setOrder('orderCount')">Orders</th>-->
                   <th>Name</th>
-                  <th>Location</th>
-                  <th>Orders</th>
+                  <th>Author</th>
+                  <th>Genre</th>
                   <th>&nbsp;</th>
                 </tr>
               </thead>
