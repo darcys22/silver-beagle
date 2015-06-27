@@ -4,16 +4,16 @@
 var myApp = angular.module('myApp', [
     'ngRoute',
     'ui.bootstrap',
-    'myApp.landing'
+    'myApp.landing',
+    'myApp.hordemind'
 ]).
 config(['$routeProvider', function($routeProvider) {
+
   // Set default view of our app to the landing page
-
-
   $routeProvider.otherwise({
     redirectTo: '/landing'
+
   });
 
 }]);
 
-myApp.value('sitename', 'foundation');

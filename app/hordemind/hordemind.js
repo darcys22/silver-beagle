@@ -36,7 +36,7 @@
 
   HordemindController.$inject = injectParams;
 
-  angular.module('myApp.hordemind')
+  angular.module('myApp.hordemind', ['ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/hordemind', {
               templateUrl: 'hordemind/hordemind.html',
