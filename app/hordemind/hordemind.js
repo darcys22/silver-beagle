@@ -1,21 +1,12 @@
 (function () {
 
-  var injectParams = ['$scope'];
+  var injectParams = ['$scope', '$http'];
 
-  var HordemindController = function($scope) {
+  var HordemindController = function($scope, $http) {
 
-    $scope.number = 20;
-    $scope.getNumber = function(num) {
-      return new Array(num);
-    };
-
-    $scope.books = [
-        {title: 'Book of Death1', author: 'aul Coelho2', cover: "assets/images/alc.jpg"},
-        {title: 'Book of Death2', author: 'aul Coelho3', cover: "assets/images/alc.jpg"},
-        {title: 'Book of Death3', author: 'aul Coelho4', cover: "assets/images/alc.jpg"},
-        {title: 'Book of Death4', author: 'aul Coelho5', cover: "assets/images/alc.jpg"},
-     ]
-          
+    $http.get('assets/generated.json').success(function(data) {
+         $scope.books = data;
+    });
 
   
   };
