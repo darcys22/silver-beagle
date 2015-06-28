@@ -23,21 +23,21 @@
     <div class="container">
       <div class="row cardContainer show-hide-animation">
         <!--data-ng-hide="vm.listDisplayModeEnabled">-->
-        <div class="col-sm-6 col-md-4 col-lg-3" data-ng-repeat="xyzz in getNumber(number) track by $index">
+        <div class="col-sm-6 col-md-4 col-lg-3" data-ng-repeat="bk in books">
           <!--data-ng-class="vm.cardAnimationClass"-->
           <div class="card">
             <button class="btn close cardClose" title="Delete Customer">
               <!--data-ng-click="vm.deleteCustomer(customer.id)">-->
               &times;</button>
             <!--<div class="cardHeader"><a href="#/customeredit/{{customer.id}}" class="white">{{customer.firstName + ' ' + customer.lastName}} <i class="icon-edit icon-white editIcon"></i></a></div>-->
-            <div class="cardHeader"><a href="#book/something" class="white"> Book of Death<i class="icon-edit icon-white editIcon"></i></a></div>
+            <div class="cardHeader"><a href="#book/something" class="white">{{bk.title}}<i class="icon-edit icon-white editIcon"></i></a></div>
             <div class="cardBody">
               <div class="clearfix">
                 <div class="pull-left cardBodyLeft">
-                  <a href="#/customeredit/" class="white"><img src="assets/images/alc.jpg" class="cardImage" /></a>
+                  <a href="#/customeredit/" class="white"><img ng-src="{{bk.cover}}" class="cardImage" /></a>
                 </div>
                 <div class="pull-left cardBodyRight">
-                  <div class="cardBodyContent">Book of Dead, Coelho</div>
+                  <div class="cardBodyContent">{{bk.author}}</div>
                   <div>
                     <a href="#/customerorders/" class="btn-link">
                       99

@@ -8,6 +8,15 @@
     $scope.getNumber = function(num) {
       return new Array(num);
     };
+
+    $scope.books = [
+        {title: 'Book of Death1', author: 'aul Coelho2', cover: "assets/images/alc.jpg"},
+        {title: 'Book of Death2', author: 'aul Coelho3', cover: "assets/images/alc.jpg"},
+        {title: 'Book of Death3', author: 'aul Coelho4', cover: "assets/images/alc.jpg"},
+        {title: 'Book of Death4', author: 'aul Coelho5', cover: "assets/images/alc.jpg"},
+     ]
+          
+
   
   };
 
