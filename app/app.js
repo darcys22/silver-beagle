@@ -5,7 +5,6 @@ var myApp = angular.module('myApp', [
     'ngRoute',
     'ui.bootstrap',
     'myApp.landing',
-    'myApp.services',
     'myApp.hordemind'
 ]).
 config(['$routeProvider', function($routeProvider) {

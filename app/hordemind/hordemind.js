@@ -1,14 +1,16 @@
 (function () {
 
-  var injectParams = ['$scope', '$http'];
+  var injectParams = ['$scope', 'bookService'];
 
-  var HordemindController = function($scope, $http) {
+  var HordemindController = function($scope, bookService) {
 
-    $http.get('assets/generated.json').success(function(data) {
-         $scope.books = data;
+    $scope.books = bookService.get();
+    $scope.books.then(function (books) {
+      $scope.books = books;
+    }, function (status) {
+      console.log(status);
     });
 
-  
   };
 
   HordemindController.$inject = injectParams;

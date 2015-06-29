@@ -1,22 +1,29 @@
-angular.module('myApp.services', [])
-  .factory('githubService', ['$http', function($http) {
+(function () {
 
-    var doRequest = function(username, path) {
-      return $http({
-        method: 'GET',
-        url: 'assets/generated.json'
-      });
-    }
+  var injectParams = ['$http', '$q'];
+
+  var bookService = function ($http, $q) {
     return {
-      events: function(username) { return doRequest(username, 'events'); },
+      get: function() {
+        var deferred = $q.defer();
+        $http.get('assets/generated.json')
+          .success(function(data) {
+            deferred.resolve(data);
+          }).error(function(data) {
+            deferred.reject(data);
+          });
+          return deferred.promise;
+        });
+      }
     };
 
-    $http.get('assets/generated.json').success(function(data) {
-      $scope.books = data;
-    });
 
+  };
+  
+  bookService.$inject = injectParams;
 
-  }]);
+  angular.module('myApp').factory('bookService', bookService);
+}());
 
 
     //var doRequest = function(username, path) {
