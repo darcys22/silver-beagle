@@ -13,13 +13,11 @@
             deferred.reject(data);
           });
           return deferred.promise;
-        });
+        }
       }
     };
 
 
-  };
-  
   bookService.$inject = injectParams;
 
   angular.module('myApp').factory('bookService', bookService);
