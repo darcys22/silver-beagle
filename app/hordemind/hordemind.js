@@ -7,6 +7,23 @@
     $scope.orderby = 'title';
     $scope.reverse = false;
 
+    $scope.listDisplayModeEnabled = false;
+    $scope.DisplayModeEnum = {
+      Cover: 0,
+      List: 1
+     };
+
+    $scope.changeDisplayMode = function (displayMode) {
+      switch (displayMode) {
+        case $scope.DisplayModeEnum.Cover:
+          $scope.listDisplayModeEnabled = false;
+          break;
+        case $scope.DisplayModeEnum.List:
+          $scope.listDisplayModeEnabled = true;
+          break;
+      }
+    };
+
     $scope.books = bookService.get();
     $scope.books.then(function (books) {
       $scope.books = books;
