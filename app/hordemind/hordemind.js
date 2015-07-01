@@ -4,6 +4,8 @@
 
   var HordemindController = function($scope, bookService) {
 
+    //List or Cover variables and functions
+
     $scope.orderby = 'id';
     $scope.reverse = false;
 
@@ -24,13 +26,6 @@
       }
     };
 
-    $scope.books = bookService.get();
-    $scope.books.then(function (books) {
-      $scope.books = books;
-    }, function (status) {
-      console.log(status);
-    });
-
     $scope.setOrder = function (orderby) {
       if (orderby === $scope.orderby) {
         $scope.reverse = !$scope.reverse;
@@ -38,6 +33,22 @@
       $scope.orderby = orderby;
     };
 
+    //Pagination stuff
+
+    $scope.currentPage = 1;
+    $scope.pageSize = 20;
+    $scope.numberOfPages = function() {
+      return Math.ceil($scope.books.length/$scope.pageSize);                
+    };
+
+    // The books themselves
+
+    $scope.books = bookService.get();
+    $scope.books.then(function (books) {
+      $scope.books = books;
+    }, function (status) {
+      console.log(status);
+    });
 
   };
 

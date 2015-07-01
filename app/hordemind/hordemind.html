@@ -20,7 +20,7 @@
     </div>
     <div class="container">
       <div class="row cardContainer show-hide-animation" data-ng-hide="listDisplayModeEnabled">
-        <div class="col-sm-6 col-md-4 col-lg-3" data-ng-repeat="bk in books | limitTo:20">
+        <div class="col-sm-6 col-md-4 col-lg-3" data-ng-repeat="bk in books | startFrom:(currentPage - 1)*pageSize | limitTo:pageSize">
           <!--data-ng-class="vm.cardAnimationClass"-->
           <div class="card">
             <div class="cardHeader"><a href="#book/something" class="white">{{bk.title}}<i class="icon-edit icon-white editIcon"></i></a></div>
@@ -43,20 +43,16 @@
               </div>
             </div>
           </div>
+        </div>
 
-        <div class="row show-hide-animation">
-          <!--data-ng-show="vm.customers.length > 0">-->
+        <div class="row show-hide-animation" data-ng-show="books.length > 0">
           <div class="col-md-12">
-            <!--<div data-pagination-->
-              <!--data-on-select-page="vm.pageChanged(page)"-->
-              <!--data-total-items="vm.totalRecords"-->
-              <!--data-page="vm.currentPage"-->
-              <!--data-items-per-page="vm.pageSize"-->
-              <!--data-boundary-links="true"-->
-              <!--class="pagination-sm"></div>-->
-            <!--<h5>Showing {{ vm.filteredCount }} of {{ vm.totalRecords}} total customers</h5>-->
-            <h5>Showing 20 of 100 total Books</h5>
-          </div>
+            <div data-pagination
+              data-total-items="books.length"
+              data-ng-model="currentPage"
+              data-items-per-page="pageSize"
+              data-boundary-links="true"
+              class="pagination-sm"></div>
         </div>
       </div>
 
