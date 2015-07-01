@@ -4,7 +4,7 @@
 
   var HordemindController = function($scope, bookService) {
 
-    $scope.orderby = 'title';
+    $scope.orderby = 'id';
     $scope.reverse = false;
 
     $scope.listDisplayModeEnabled = false;
