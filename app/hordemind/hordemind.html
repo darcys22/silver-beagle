@@ -47,7 +47,23 @@
               </div>
             </div>
           </div>
+
+        <div class="row show-hide-animation">
+          <!--data-ng-show="vm.customers.length > 0">-->
+          <div class="col-md-12">
+            <!--<div data-pagination-->
+              <!--data-on-select-page="vm.pageChanged(page)"-->
+              <!--data-total-items="vm.totalRecords"-->
+              <!--data-page="vm.currentPage"-->
+              <!--data-items-per-page="vm.pageSize"-->
+              <!--data-boundary-links="true"-->
+              <!--class="pagination-sm"></div>-->
+            <!--<h5>Showing {{ vm.filteredCount }} of {{ vm.totalRecords}} total customers</h5>-->
+            <h5>Showing 20 of 100 total Books</h5>
+          </div>
         </div>
+      </div>
+
       </div>
       <div class="row gridContainer customersTable show-hide-animation">
         <!--data-ng-show="vm.listDisplayModeEnabled">-->
@@ -56,44 +72,26 @@
             <table class="table table-condensed">
               <thead>
                 <tr>
-                  <th>&nbsp;</th>
-                  <!--<th data-ng-click="vm.setOrder('lastName')">Name</th>-->
-                  <!--<th data-ng-click="vm.setOrder('city')">Location</th>-->
-                  <!--<th data-ng-click="vm.setOrder('orderCount')">Orders</th>-->
-                  <th>Name</th>
-                  <th>Author</th>
+                  <th data-ng-click="setOrder('id')">Rank</th>
+                  <th data-ng-click="setOrder('title')">Name</th>
+                  <th data-ng-click="setOrder('author')">Author</th>
                   <th>Genre</th>
                   <th>&nbsp;</th>
                 </tr>
               </thead>
               <tbody>
-              <tr data-ng-repeat="bk in books" class="repeat-animation">
-              <!--<tr data-ng-repeat="bk in books | orderBy:vm.orderby:vm.reverse" class="repeat-animation">-->
-                <td></td>
+              <tr data-ng-repeat="bk in books | orderBy:orderby:reverse" class="repeat-animation">
+                <td>{{bk.id}}</td>
                 <td><a href="#/customeredit/">{{bk.title}}</a></td>
                 <td>{{bk.author}}</td>
                 <td>Horror </td>
-                <td><button class="btn btn-danger">Delete</button></td>
+                <td></td>
                 <!--<td><button class="btn btn-danger" data-ng-click="vm.deleteCustomer(customer.id)">Delete</button></td>-->
               </tr>
               </tbody>
             </table>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row show-hide-animation">
-      <!--data-ng-show="vm.customers.length > 0">-->
-      <div class="col-md-12">
-        <!--<div data-pagination-->
-          <!--data-on-select-page="vm.pageChanged(page)"-->
-          <!--data-total-items="vm.totalRecords"-->
-          <!--data-page="vm.currentPage"-->
-          <!--data-items-per-page="vm.pageSize"-->
-          <!--data-boundary-links="true"-->
-          <!--class="pagination-sm"></div>-->
-        <!--<h5>Showing {{ vm.filteredCount }} of {{ vm.totalRecords}} total customers</h5>-->
-        <h5>Showing 20 of 100 total Books</h5>
       </div>
     </div>
     <br /><br /><br />

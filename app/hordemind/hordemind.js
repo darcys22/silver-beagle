@@ -4,12 +4,23 @@
 
   var HordemindController = function($scope, bookService) {
 
+    $scope.orderby = 'title';
+    $scope.reverse = false;
+
     $scope.books = bookService.get();
     $scope.books.then(function (books) {
       $scope.books = books;
     }, function (status) {
       console.log(status);
     });
+
+    $scope.setOrder = function (orderby) {
+      if (orderby === $scope.orderby) {
+        $scope.reverse = !$scope.reverse;
+      }
+      $scope.orderby = orderby;
+    };
+
 
   };
 

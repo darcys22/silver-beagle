@@ -1,127 +1,152 @@
 [
   {
-    "title": "LUNCHPOD", 
+    "title": "PODUNK", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Christie Pittman"
+    "id": 1, 
+    "author": "Howe Knox"
   }, 
   {
-    "title": "STRALOY", 
+    "title": "OPTICOM", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Wilson Mullen"
+    "id": 2, 
+    "author": "Hester Weber"
   }, 
   {
-    "title": "RENOVIZE", 
+    "title": "BUZZOPIA", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Harrison Mayo"
+    "id": 3, 
+    "author": "Brewer Rios"
   }, 
   {
-    "title": "VIXO", 
+    "title": "BITREX", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Iris Conrad"
+    "id": 4, 
+    "author": "Carr Mack"
   }, 
   {
-    "title": "ZINCA", 
+    "title": "MOMENTIA", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Kelly Burks"
+    "id": 5, 
+    "author": "Patty Madden"
   }, 
   {
-    "title": "WAAB", 
+    "title": "ROTODYNE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Velma Rice"
+    "id": 6, 
+    "author": "Tina Riley"
   }, 
   {
-    "title": "VERBUS", 
+    "title": "VENDBLEND", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Marguerite Armstrong"
+    "id": 7, 
+    "author": "Wood Holder"
   }, 
   {
-    "title": "CONFERIA", 
+    "title": "STRALUM", 
     "cover": "assets/images/alc.jpg", 
-    "author": "May Wolf"
+    "id": 8, 
+    "author": "Claire Ramsey"
   }, 
   {
-    "title": "POLARIUM", 
+    "title": "LOCAZONE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Paul Richardson"
+    "id": 9, 
+    "author": "John Curtis"
   }, 
   {
-    "title": "GLUKGLUK", 
+    "title": "XANIDE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Holcomb Sellers"
+    "id": 10, 
+    "author": "Wanda Kemp"
   }, 
   {
-    "title": "EBIDCO", 
+    "title": "OPTIQUE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Amparo Shaffer"
+    "id": 11, 
+    "author": "Marisa Haney"
   }, 
   {
-    "title": "ONTALITY", 
+    "title": "PAWNAGRA", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Sheri Dodson"
+    "id": 12, 
+    "author": "Prince Sweet"
   }, 
   {
-    "title": "ZIDANT", 
+    "title": "TRI@TRIBALOG", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Amalia Weaver"
+    "id": 13, 
+    "author": "Marcy Willis"
   }, 
   {
-    "title": "VALPREAL", 
+    "title": "PHUEL", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Kaitlin Pena"
+    "id": 14, 
+    "author": "Potter Mejia"
   }, 
   {
-    "title": "GEEKWAGON", 
+    "title": "COMSTAR", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Gomez Norris"
+    "id": 15, 
+    "author": "Glenn Walls"
   }, 
   {
-    "title": "MEDESIGN", 
+    "title": "AQUASSEUR", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Susanne Deleon"
+    "id": 16, 
+    "author": "Constance Dennis"
   }, 
   {
-    "title": "PLASMOX", 
+    "title": "ZILLAR", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Rowena Michael"
+    "id": 17, 
+    "author": "Abigail Sutton"
   }, 
   {
-    "title": "SHADEASE", 
+    "title": "UNIA", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Doyle Dorsey"
+    "id": 18, 
+    "author": "Livingston Gross"
   }, 
   {
-    "title": "QUANTASIS", 
+    "title": "CIPROMOX", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Guy Fulton"
+    "id": 19, 
+    "author": "Wallace Tran"
   }, 
   {
-    "title": "TUBESYS", 
+    "title": "CENTURIA", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Baldwin Miranda"
+    "id": 20, 
+    "author": "Mae Goodwin"
   }, 
   {
-    "title": "FRENEX", 
+    "title": "COLAIRE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Palmer Downs"
+    "id": 21, 
+    "author": "Olsen Chan"
   }, 
   {
-    "title": "ZAGGLE", 
+    "title": "TURNABOUT", 
     "cover": "assets/images/alc.jpg", 
-    "author": "James Strong"
+    "id": 22, 
+    "author": "Leta Massey"
   }, 
   {
-    "title": "APEXIA", 
+    "title": "CORPULSE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Sandoval Kemp"
+    "id": 23, 
+    "author": "Montgomery Macdonald"
   }, 
   {
-    "title": "BOSTONIC", 
+    "title": "DEVILTOE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Bright Mcclain"
+    "id": 24, 
+    "author": "Melinda Osborne"
   }, 
   {
-    "title": "ROBOID", 
+    "title": "DATAGENE", 
     "cover": "assets/images/alc.jpg", 
-    "author": "Mason Berger"
+    "id": 25, 
+    "author": "Torres Hampton"
   }
 ]
