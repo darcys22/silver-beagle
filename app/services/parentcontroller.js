@@ -1,7 +1,7 @@
-function () {
+(function () {
 
     function controllerService() {
-      return crtlService;
+      return ctrlService;
     }
 
     function ctrlService(scope) {
