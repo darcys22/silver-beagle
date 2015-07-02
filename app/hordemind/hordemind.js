@@ -1,9 +1,8 @@
 (function () {
 
-  var injectParams = ['$scope', 'bookService'];
+  var injectParams = ['$scope', '$injector', 'bookService'];
 
-  var HordemindController = function($scope, bookService) {
-
+  var parentController = function($scope) {
     //List or Cover variables and functions
 
     $scope.orderby = 'id';
@@ -40,6 +39,12 @@
     $scope.numberOfPages = function() {
       return Math.ceil($scope.books.length/$scope.pageSize);                
     };
+  }
+
+  var HordemindController = function($scope, $injector, bookService) {
+
+    $injector.invoke(parentController, this, {$scope: $scope});
+
 
     // The books themselves
 
