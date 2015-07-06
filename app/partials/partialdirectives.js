@@ -24,19 +24,9 @@
     }
   };
 
-  var navigat = function () {
-    return {
-      restrict: 'E',
-      scope: false,
-      transclude: true,
-      templateUrl: 'partials/navigate.html'
-    }
-  };
-
   angular.module('myApp')
     .directive('viewSelecter', viewSelecter)
     .directive('coverView', coverView)
-    .directive('listView', listView)
-    .directive('navigat', navigat);
+    .directive('listView', listView);
 }());
 
