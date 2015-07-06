@@ -22,7 +22,8 @@
   angular.module('myApp.mybooks', ['ngRoute'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/mybooks', {
-              templateUrl: 'mybooks/mybooks.html',
+              //templateUrl: 'mybooks/mybooks.html',
+              templateUrl: 'hordemind/hordemind.html',
               controller: 'MybooksController'
             });
     }])
