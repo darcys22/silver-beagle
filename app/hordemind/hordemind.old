@@ -2,7 +2,35 @@
   <div class="container">
     <view-selecter></view-selecter>
     <div class="container">
-      <cover-view></cover-view>
+      <div class="row cardContainer show-hide-animation" data-ng-hide="listDisplayModeEnabled">
+        <div class="col-sm-6 col-md-4 col-lg-3" data-ng-repeat="bk in books | startFrom:(currentPage - 1)*pageSize | limitTo:pageSize">
+          <div class="card">
+            <div class="cardHeader"><a href="#book/something" class="white">{{bk.title}}<i class="icon-edit icon-white editIcon"></i></a></div>
+            <div class="cardBody">
+              <div class="clearfix">
+                <div class="pull-left cardBodyLeft">
+                  <a href="#/customeredit/" class="white"><img ng-src="{{bk.cover}}" class="cardImage" /></a>
+                </div>
+                <div class="pull-left cardBodyRight">
+                  <div class="cardBodyContent">{{bk.author}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row show-hide-animation" data-ng-show="books.length > 0">
+          <div class="col-md-12">
+            <div data-pagination
+              data-total-items="books.length"
+              data-ng-model="currentPage"
+              data-items-per-page="pageSize"
+              data-boundary-links="true"
+              class="pagination-sm pagebar"></div>
+        </div>
+      </div>
+
+      </div>
       <div class="row gridContainer customersTable show-hide-animation" data-ng-show="listDisplayModeEnabled">
         <div class="col-md-10">
           <div>
