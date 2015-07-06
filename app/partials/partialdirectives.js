@@ -16,7 +16,16 @@
     }
   };
 
+  var listView = function () {
+    return {
+      restrict: 'E',
+      scope: false,
+      templateUrl: 'partials/listview.html'
+    }
+  };
+
   angular.module('myApp').directive('viewSelecter', viewSelecter);
   angular.module('myApp').directive('coverView', coverView);
+  angular.module('myApp').directive('listView', listView);
 }());
 
