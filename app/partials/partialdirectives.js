@@ -36,7 +36,7 @@
   angular.module('myApp')
     .directive('viewSelecter', viewSelecter)
     .directive('coverView', coverView)
-    .directive('listView', listView);
+    .directive('listView', listView)
     .directive('navigat', navigat);
 }());
 
