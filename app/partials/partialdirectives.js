@@ -24,8 +24,19 @@
     }
   };
 
-  angular.module('myApp').directive('viewSelecter', viewSelecter);
-  angular.module('myApp').directive('coverView', coverView);
-  angular.module('myApp').directive('listView', listView);
+  var navigat = function () {
+    return {
+      restrict: 'E',
+      scope: false,
+      transclude: true,
+      templateUrl: 'partials/navigate.html'
+    }
+  };
+
+  angular.module('myApp')
+    .directive('viewSelecter', viewSelecter)
+    .directive('coverView', coverView)
+    .directive('listView', listView);
+    .directive('navigat', navigat);
 }());
 
