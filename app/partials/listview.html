@@ -1,0 +1,28 @@
+<div class="row gridContainer customersTable show-hide-animation" data-ng-show="listDisplayModeEnabled">
+  <div class="col-md-10">
+    <div>
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th data-ng-click="setOrder('id')">Rank</th>
+            <th data-ng-click="setOrder('title')">Name</th>
+            <th data-ng-click="setOrder('author')">Author</th>
+            <th>Genre</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr data-ng-repeat="bk in books | orderBy:orderby:reverse" class="repeat-animation">
+          <td>{{bk.id}}</td>
+          <td><a href="#/customeredit/">{{bk.title}}</a></td>
+          <td>{{bk.author}}</td>
+          <td>Horror </td>
+          <td></td>
+          <!--<td><button class="btn btn-danger" data-ng-click="vm.deleteCustomer(customer.id)">Delete</button></td>-->
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
