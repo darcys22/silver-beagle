@@ -3,14 +3,25 @@
   <div class="flexsearch">
       <div class="flexsearch--wrapper">
           <div class="flexsearch--input-wrapper">
-            <input class="flexsearch--input" type="search" placeholder="Search">
+            <input ng-model="query" class="flexsearch--input" type="search" placeholder="Search">
           </div>
       </div>
   </div>
 
+  <!--<nit-advanced-searchbox ng-model="searchParams" parameters="availableSearchParams" placeholder="Search..."></nit-advanced-searchbox>-->
+  <br>
+    
+  <ul class="booksearch container">
+    <li ng-repeat="book in books | filter:query | limitTo: 5"
+        class="thumbnail">
+      <a href="">{{book.title}}</a>
+      <p>{{book.author}}</p>
+    </li>
+  </ul> 
+
 <br>
 
-  <div class="container">
+  <div class="container hide">
     <view-selecter></view-selecter>
     <div class="container">
       <cover-view></cover-view>
