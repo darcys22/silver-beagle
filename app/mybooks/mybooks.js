@@ -20,6 +20,14 @@
       { key: "author", name: "Author", placeholder: "Author..." },
     ];
 
+    $scope.something = '';
+    $scope.query = {query: ''};
+
+    $scope.query.query.$watch = function() {
+      $scope.something = this;
+    };
+      
+
   };
 
   MybooksController.$inject = injectParams;

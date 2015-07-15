@@ -3,13 +3,13 @@
   <div class="flexsearch">
       <div class="flexsearch--wrapper">
           <div class="flexsearch--input-wrapper">
-  <nit-advanced-searchbox ng-model="query" parameters="availableSearchParams" placeholder="Add Your Books..."></nit-advanced-searchbox>
+            <nit-advanced-searchbox ng-model="query" parameters="availableSearchParams" placeholder="Add Your Books..."></nit-advanced-searchbox>
           </div>
       </div>
   </div>
 
   <br>
-  {{query.query}}
+  {{something}}
     
   <ul class="booksearch container">
     <li ng-repeat="book in books | filter:query.query | limitTo: 5"
@@ -30,20 +30,3 @@
     <br /><br /><br />
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-  <!--<div class="flexsearch">-->
-      <!--<div class="flexsearch--wrapper">-->
-          <!--<div class="flexsearch--input-wrapper">-->
-            <!--<input ng-model="query" class="flexsearch--input" type="search" placeholder="Search">-->
-          <!--</div>-->
-      <!--</div>-->
-  <!--</div>-->
-  <!--<br>-->
