@@ -15,6 +15,11 @@
       console.log(status);
     });
 
+    $scope.availableSearchParams = [
+      { key: "title", name: "Title", placeholder: "Title..." },
+      { key: "author", name: "Author", placeholder: "Author..." },
+    ];
+
   };
 
   MybooksController.$inject = injectParams;

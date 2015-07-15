@@ -1,18 +1,18 @@
 <div class="customers view indent">
-
+  
   <div class="flexsearch">
       <div class="flexsearch--wrapper">
           <div class="flexsearch--input-wrapper">
-            <input ng-model="query" class="flexsearch--input" type="search" placeholder="Search">
+  <nit-advanced-searchbox ng-model="query" parameters="availableSearchParams" placeholder="Add Your Books..."></nit-advanced-searchbox>
           </div>
       </div>
   </div>
 
-  <nit-advanced-searchbox ng-model="searchParams" parameters="availableSearchParams" placeholder="Search..."></nit-advanced-searchbox>
   <br>
+  {{query.query}}
     
   <ul class="booksearch container">
-    <li ng-repeat="book in books | filter:query | limitTo: 5"
+    <li ng-repeat="book in books | filter:query.query | limitTo: 5"
         class="thumbnail">
       <a href="">{{book.title}}</a>
       <p>{{book.author}}</p>
@@ -30,3 +30,20 @@
     <br /><br /><br />
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+  <!--<div class="flexsearch">-->
+      <!--<div class="flexsearch--wrapper">-->
+          <!--<div class="flexsearch--input-wrapper">-->
+            <!--<input ng-model="query" class="flexsearch--input" type="search" placeholder="Search">-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</div>-->
+  <!--<br>-->
