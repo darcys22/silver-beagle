@@ -20,12 +20,18 @@
       { key: "author", name: "Author", placeholder: "Author..." },
     ];
 
-    $scope.something = '';
-    $scope.query = {query: ''};
+    $scope.query = {};
 
-    $scope.query.query.$watch = function() {
-      $scope.something = this;
-    };
+    $scope.$watch('query', function(value) {
+      if (value.query || value.title || value.author) {
+          $scope.books = bookService.searchBooks(value);
+          $scope.books.then(function (books) {
+            $scope.books = books;
+          }, function (status) {
+            console.log(status);
+          });
+      }
+    }, true);
       
 
   };

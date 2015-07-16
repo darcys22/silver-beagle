@@ -1,8 +1,8 @@
 (function () {
 
-  var injectParams = ['$http', '$q'];
+  var injectParams = ['$http', '$q', '$filter'];
 
-  var bookService = function ($http, $q) {
+  var bookService = function ($http, $q, $filter) {
     return {
 
       getTopBooks: function() {
@@ -31,7 +31,7 @@
         var deferred = $q.defer();
         $http.get('assets/generated.json')
           .success(function(data) {
-            deferred.resolve(data);
+            deferred.resolve($filter('limitTo')(data, 5));
           }).error(function(data) {
             deferred.reject(data);
           });
