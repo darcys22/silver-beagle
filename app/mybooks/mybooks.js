@@ -21,15 +21,20 @@
     ];
 
     $scope.query = {};
+    $scope.searchReturn = false;
+    $scope.focus = false;
 
     $scope.$watch('query', function(value) {
       if (value.query || value.title || value.author) {
           $scope.books = bookService.searchBooks(value);
           $scope.books.then(function (books) {
             $scope.books = books;
+            $scope.searchReturn = true;
           }, function (status) {
             console.log(status);
           });
+          //TODO: Remove but shows how often it searches
+          console.log('Search');
       }
     }, true);
       
