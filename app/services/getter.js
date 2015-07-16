@@ -4,7 +4,30 @@
 
   var bookService = function ($http, $q) {
     return {
-      get: function() {
+
+      getTopBooks: function() {
+        var deferred = $q.defer();
+        $http.get('assets/generated.json')
+          .success(function(data) {
+            deferred.resolve(data);
+          }).error(function(data) {
+            deferred.reject(data);
+          });
+          return deferred.promise;
+        },
+
+      getMyBooks: function() {
+        var deferred = $q.defer();
+        $http.get('assets/generated.json')
+          .success(function(data) {
+            deferred.resolve(data);
+          }).error(function(data) {
+            deferred.reject(data);
+          });
+          return deferred.promise;
+        },
+
+      searchBooks: function(query) {
         var deferred = $q.defer();
         $http.get('assets/generated.json')
           .success(function(data) {
@@ -14,6 +37,7 @@
           });
           return deferred.promise;
         }
+
       }
     };
 
