@@ -8,7 +8,7 @@
 
     // The books themselves
 
-    $scope.books = bookService.get();
+    $scope.books = bookService.getTopBooks();
     $scope.books.then(function (books) {
       $scope.books = books;
     }, function (status) {
