@@ -20,12 +20,26 @@
       { key: "author", name: "Author", placeholder: "Author..." },
     ];
 
+    $scope.doBlur = function() {
+      console.log('blur');
+    };
+
     $scope.query = {};
-    $scope.searchReturn = false;
     $scope.focus = false;
 
+    var validSearch = function (searchObject) {
+      return (searchObject.query || searchObject.title || searchObject.author)
+    };
+
+    $scope.$watch('focus', function(value) {
+      //TODO MAKE THIS WORK
+      if (!focus && !validSearch(value)) {
+        $scope.searchReturn = false;
+      }
+    });
+
     $scope.$watch('query', function(value) {
-      if (value.query || value.title || value.author) {
+      if (validSearch(value)) {
           $scope.books = bookService.searchBooks(value);
           $scope.books.then(function (books) {
             $scope.books = books;
