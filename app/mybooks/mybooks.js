@@ -28,27 +28,34 @@
     $scope.focus = false;
 
     var validSearch = function (searchObject) {
-      return (searchObject.query || searchObject.title || searchObject.author)
+
+      return (searchObject.query || searchObject.title || searchObject.author) ? true : false
+      //if (searchObject.query || searchObject.title || searchObject.author) { 
+        //console.log('TRUE');
+        //return true
+      //} else {
+        //console.log('FALSE');
+        //console.log(searchObject);
+        //return false
+      //}
     };
 
     $scope.$watch('focus', function(value) {
       //TODO MAKE THIS WORK
-      if (!focus && !validSearch(value)) {
+      if (!value && !validSearch($scope.query)) {
         $scope.searchReturn = false;
       }
     });
 
     $scope.$watch('query', function(value) {
       if (validSearch(value)) {
-          $scope.books = bookService.searchBooks(value);
-          $scope.books.then(function (books) {
-            $scope.books = books;
+          $scope.searchResults = bookService.searchBooks(value);
+          $scope.searchResults.then(function (books) {
+            $scope.searchResults = books;
             $scope.searchReturn = true;
           }, function (status) {
             console.log(status);
           });
-          //TODO: Remove but shows how often it searches
-          console.log('Search');
       }
     }, true);
       
