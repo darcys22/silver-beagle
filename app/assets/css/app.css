@@ -68,19 +68,6 @@ body {
   margin-left:50px;
   margin-top: -8px;
 }
-/*footer {*/
-  /*margin-top:10px;*/
-  /*font-weight: bold;*/
-/*}*/
-/*.customerEdit input[type='text'],*/
-/*.customerEdit input[type='number'],*/
-/*.customerEdit input[type='email'],*/
-/*.customerEdit select,*/
-/*.login input[type='text'],*/
-/*.login input[type='email'],*/
-/*.login input[type='password'] {*/
-  /*width:250px;*/
-/*}*/
 .statusRow {
   height:50px;
 }

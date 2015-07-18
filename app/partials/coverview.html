@@ -1,11 +1,11 @@
 <div data-ng-hide="listDisplayModeEnabled">
   <ul class="book-list">
       <li class="book-list" data-ng-repeat="bk in books | limitTo: pageSize : (currentPage -1)*pageSize">
-        <img class="cover-image" src="assets/images/alc.jpg">
         <div class="cover">
             <div class="cover-overlay">
             </div>
         </div>
+        <img class="cover-image" src="assets/images/alc.jpg">
 
         <strong class="title" title="{{bk.title}}">{{bk.title}}</strong>
         <small class="year">{{bk.author}}</small>
