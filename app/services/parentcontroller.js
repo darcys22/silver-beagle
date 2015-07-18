@@ -35,14 +35,6 @@
         scope.orderby = orderby;
       };
 
-      //Pagination stuff
-
-      scope.currentPage = 1;
-      scope.pageSize = 20;
-      scope.numberOfPages = function() {
-        return Math.ceil(scope.books.length/scope.pageSize);                
-      };
-    }
 
 angular.module('myApp').factory('controllerService', controllerService);
 

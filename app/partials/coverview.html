@@ -1,6 +1,6 @@
 <div data-ng-hide="listDisplayModeEnabled">
   <ul class="book-list">
-      <li class="book-list" data-ng-repeat="bk in books | limitTo: pageSize : (currentPage -1)*pageSize">
+      <li class="book-list" data-ng-repeat="bk in books">
         <div class="cover">
             <div class="cover-overlay">
             </div>
@@ -12,16 +12,5 @@
       </li>
   </ul>
 
-  <div class="pgn show-hide-animation" data-ng-show="books.length > 0">
-    <div class="col-md-12">
-      <div data-pagination
-        data-total-items="books.length"
-        data-ng-model="currentPage"
-        data-items-per-page="pageSize"
-        data-boundary-links="true"
-        class="paginator">
-      </div>
-    </div>
-  </div>
 </div>
 
