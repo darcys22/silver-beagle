@@ -90,7 +90,7 @@ td, th {
 }
 
 #footer {
-  height: 150px;
+  height: 50px;
   color: #fff;
 }
 #footer p {
@@ -106,11 +106,11 @@ td, th {
   text-decoration: underline;
 }
 #footer .darcy {
-  padding: 75px 0px 15px 133px;
+  padding: 45px 0px 0px 55px;
 }
 #footer .copyright {
   float: right;
   text-align: right;
-  padding: 60px 165px 0px 0px;
+  padding: 45px 65px 0px 0px;
 }
 

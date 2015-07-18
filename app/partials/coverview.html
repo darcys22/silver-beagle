@@ -10,16 +10,15 @@
       <small class="year">{{bk.author}}</small>
     </li>
 </ul>
-<div class="container">
-  <div class="row show-hide-animation" data-ng-show="books.length > 0">
-    <div class="col-md-12">
-      <div data-pagination
-        data-total-items="books.length"
-        data-ng-model="currentPage"
-        data-items-per-page="pageSize"
-        data-boundary-links="true"
-        class="paginator">
-      </div>
+
+<div class="pgn show-hide-animation" data-ng-show="books.length > 0">
+  <div class="col-md-12">
+    <div data-pagination
+      data-total-items="books.length"
+      data-ng-model="currentPage"
+      data-items-per-page="pageSize"
+      data-boundary-links="true"
+      class="paginator">
     </div>
   </div>
 </div>

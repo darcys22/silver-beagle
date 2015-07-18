@@ -110,6 +110,10 @@
   z-index: 3;
 }
 
+.pgn {
+  margin: 0 38px;
+}
+
 .paginator {
   list-style-type: none;
   border-radius: 4px;
