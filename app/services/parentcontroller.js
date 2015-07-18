@@ -34,6 +34,7 @@
         }
         scope.orderby = orderby;
       };
+    }
 
 
 angular.module('myApp').factory('controllerService', controllerService);
