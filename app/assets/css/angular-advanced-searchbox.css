@@ -19,15 +19,17 @@
 
     .advancedSearchBox .search-icon {
         float: right;
-        top: 50%;
-        transform: translateY(50%);
+        line-height: 1.5;
+        /*top: 50%;*/
+        /*transform: translateY(50%);*/
     }
 
     .advancedSearchBox .remove-all-icon {
         float: right;
         cursor: pointer;
-        top: 50%;
-        transform: translateY(50%);
+        line-height: 1.5;
+        /*top: 50%;*/
+        /*transform: translateY(50%);*/
     }
 
     .advancedSearchBox .search-parameter {
