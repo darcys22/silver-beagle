@@ -121,6 +121,7 @@ body {
   color: #fff;
   border-radius: .4em;
   overflow: hidden;
+  width: 100%;
 }
 .rwd-table tr {
   border-color: #46627f;
