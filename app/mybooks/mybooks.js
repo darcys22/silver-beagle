@@ -4,6 +4,13 @@
 
   var MybooksController = function($scope, controllerService, bookService) {
 
+    $scope.userid = "c4ca4238a0b923820dcc509a6f75849b";
+
+    try {
+      var ec = new evercookie();
+      ec.get("id", function(value) { alert("Cookie value is " + value) });
+    } catch(e) {};
+
     controllerService($scope);
 
     // The books themselves
